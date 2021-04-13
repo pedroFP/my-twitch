@@ -11,7 +11,7 @@
     <% if user_signed_in? %>
       <div class='row'> 
         <div class='col-md-12 col-xl-9'>
-          <textarea class="form-control" id="message" user-name="<%= 'current_user.name' %>" rows="2"></textarea>
+          <textarea class="form-control" id="message" user-name="<%= current_user.name %>" rows="2"></textarea>
           <br>
         </div>
         <div class='col-md-12 col-xl-3'>
