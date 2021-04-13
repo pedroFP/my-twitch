@@ -1,4 +1,29 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1> Welcome to my twitch app</h1>
+<p>This was made only for learning purposes</p>
 
-<video id="video" width="800" controls></video>
+<div class="row">
+  <div class="col-md-8">
+    <video id="video" width="100%" controls></video>
+  </div>
+  <div class="col-md-4">
+    <h3>Chatroom...</h3>
+    <div id="chatroom" room="my_twitch">
+    </div>
+    <div class='row'> 
+      <div class='col-md-12 col-xl-9'>
+        <textarea class="form-control" id="message" user-name="<%= 'current_user.name' %>" rows="2"></textarea>
+        <br>
+      </div>
+      <div class='col-md-12 col-xl-3'>
+        <button id='send' type="button" class="btn btn-dark">Submit</button>
+        <br>
+      </div>
+        <div class="form-check mx-2">
+          <input class="form-check-input" type="checkbox" value="" id="auto-scroll" checked>
+          <label class="form-check-label" for="auto-scroll">
+            auto scroll
+          </label>
+        </div>
+    </div>
+  </div>
+</div>
