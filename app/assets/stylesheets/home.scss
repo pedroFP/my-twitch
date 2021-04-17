@@ -7,6 +7,15 @@
   border-radius: 10px;
   padding-top: 10px;
 }
-.card-body {
-  height: 16em;
+.card {
+  background-color: #18181b;
+  border-radius: 7.5px;
+}
+
+#chatroom {
+  background-color: azure;
+  height: 15em;
+  border-radius: 5px;
+  max-height: 26em;
+  overflow-y:scroll;
 }

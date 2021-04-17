@@ -29,6 +29,20 @@ body {
     color: white;
 }
 
-.purple {
+.text-purple {
     color: #7952b3;
 }
+
+.very-black {
+    background-color: #18181b;
+}
+
+.text-very-black {
+    color: #18181b;
+}
+
+.form-check-input:checked {
+    background-color: #7952b3;
+    border-color: #7952b3;
+}
+

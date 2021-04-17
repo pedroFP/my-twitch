@@ -1,0 +1,24 @@
+<div class="card" style="width: 100%;">
+  <div class="card-body">
+    <h3 class="text-white">Chatroom...</h3>
+    <div class="mb-3 px-1" id="chatroom" room="my_twitch"></div>
+    <% if user_signed_in? %>
+      <div class='row'> 
+        <div class='col-md-12 col-xl-9 mb-3'>
+          <textarea class="form-control" id="message" user-name="<%= current_user.name %>" rows="1"></textarea>
+        </div>
+        <div class='col-md-12 col-xl-3 d-grid mb-3 justify-content-xl-end'>
+          <button id='send' type="button" class="btn ms-0 btn-purple">Submit</button>
+        </div>
+      </div>
+      <div class='row'>
+          <div class="col-md-12 form-check text-light ms-3">
+            <input class="form-check-input" type="checkbox" value="" id="auto-scroll" checked>
+            <label class="form-check-label" for="auto-scroll">
+              auto scroll
+            </label>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>

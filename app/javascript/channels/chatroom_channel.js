@@ -18,7 +18,7 @@ $(document).on('turbolinks:load ajax:sucess', function() {
       var user = data['user']
       var message = data['message']
       var chat = '<p><strong>' + user + ':</strong> ' + message + '</p>'
-      $('#chatroom').prepend(chat)
+      $('#chatroom').append(chat)
       console.log($('#auto-scroll').is(':checked'))
       if ($('#auto-scroll').is(':checked')) {
         document.getElementById('chatroom').scrollTop =  document.getElementById('chatroom').scrollHeight
