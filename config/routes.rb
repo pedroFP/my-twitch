@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  if Rails.env.development? 
+    # Sidekiq dashboard
+    require 'sidekiq/web'
+    mount Sidekiq::Web => '/sidekiq'
+  end
   get 'home/index'
   root 'home#index'
   # post 'stream_auth', to: 'stream_auth#create'
