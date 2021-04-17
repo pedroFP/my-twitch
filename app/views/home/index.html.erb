@@ -1,24 +1,28 @@
-<h1> Welcome to my twitch app</h1>
+<h1 class="text-white my-3" > Welcome to my twitch app</h1>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-8 text-white">
     <video id="video" width="100%" controls></video>
     <p>This was made only for learning purposes</p>
   </div>
-  <div class="col-md-4">
-    <h3>Chatroom...</h3>
-    <div id="chatroom" room="my_twitch"></div>
+  <div class="col-md-4 text-purple chat">
+    <h3 class="text-white">Chatroom...</h3>
+    <div class="card mb-3" style="width: 100%;">
+      <div class="card-body">
+        <div id="chatroom" room="my_twitch"></div>
+      </div>
+    </div>
     <% if user_signed_in? %>
       <div class='row'> 
-        <div class='col-md-12 col-xl-9'>
-          <textarea class="form-control" id="message" user-name="<%= current_user.name %>" rows="2"></textarea>
-          <br>
+        <div class='col-md-12 col-xl-9 mb-3'>
+          <textarea class="form-control" id="message" user-name="<%= current_user.name %>" rows="1"></textarea>
         </div>
-        <div class='col-md-12 col-xl-3'>
-          <button id='send' type="button" class="btn btn-dark">Submit</button>
-          <br>
+        <div class='col-md-12 col-xl-3 d-grid mb-3 justify-content-xl-end'>
+          <button id='send' type="button" class="btn ms-0 btn-purple">Submit</button>
         </div>
-          <div class="form-check mx-2">
+      </div>
+      <div class='row'>
+          <div class="col-md-12 form-check text-light ms-3">
             <input class="form-check-input" type="checkbox" value="" id="auto-scroll" checked>
             <label class="form-check-label" for="auto-scroll">
               auto scroll
