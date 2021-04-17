@@ -69,9 +69,9 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.smtp_settings = {
-    :address => ENV['SMTP_EMAIL'],
+    :address => ENV['SMTP_ADDRESS'],
     :port => 587,
-    :user_name => ENV['SMTP_ADDRESS'],
+    :user_name => ENV['SMTP_EMAIL'],
     :password => ENV['SMTP_PASSWORD'],
     :authentication => 'plain',
     :enable_starttls_auto => true

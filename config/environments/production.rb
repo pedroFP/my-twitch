@@ -41,7 +41,7 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   config.action_cable.url = 'wss://pedro-tv.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://pedro-tv.herokuapp.com/' ]
+  config.action_cable.allowed_request_origins = [ 'https://pedro-tv.herokuapp.com' ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -113,9 +113,9 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'pedro-tv.herokuapp.com' }
 
   config.action_mailer.smtp_settings = {
-    :address => ENV['SMTP_EMAIL'],
+    :address => ENV['SMTP_ADDRESS'],
     :port => 587,
-    :user_name => ENV['SMTP_ADDRESS'],
+    :user_name => ENV['SMTP_EMAIL'],
     :password => ENV['SMTP_PASSWORD'],
     :authentication => 'plain',
     :enable_starttls_auto => true
