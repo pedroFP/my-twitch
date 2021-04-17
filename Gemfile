@@ -26,6 +26,9 @@ gem 'pg'
 
 gem 'devise'
 
+# add figaro for environment variables
+gem "figaro"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
