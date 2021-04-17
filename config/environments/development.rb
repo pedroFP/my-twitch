@@ -31,7 +31,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.active_job.queue_adapter = :redis
+  config.active_job.queue_adapter = :sidekiq
 
   # Allow action testing (Postman)
   config.hosts.clear #config.hosts << "localhost"
