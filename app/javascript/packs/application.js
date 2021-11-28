@@ -21,7 +21,7 @@ import Hls from "hls.js/dist/hls"
 
 $(document).on('turbolinks:load', function() {
   var video = document.getElementById("video");
-  var videoSrc = "http://localhost:8080/hls/test.m3u8";
+  var videoSrc = video.getAttribute("stream-url");
   if (Hls.isSupported()) {
     var hls = new Hls();
     hls.loadSource(videoSrc);
